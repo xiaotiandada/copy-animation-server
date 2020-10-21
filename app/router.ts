@@ -5,4 +5,5 @@ export default (app: Application) => {
 
   router.get('/', controller.home.index);
   router.get('/shop', controller.shop.index);
+  router.post('/shop', controller.shop.createShop);
 };
