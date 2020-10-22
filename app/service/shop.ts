@@ -34,8 +34,9 @@ export default class Shop extends Service {
    */
   public async createShop({ title, src, iframe }: shopInterface) {
     try {
-      const time = moment().format('YYYY-MM-DD HH:mm:ss');
+      const time: string = moment().format('YYYY-MM-DD HH:mm:ss');
       this.logger.info('title, src, iframe, time', title, src, iframe, time);
+      console.log('time', typeof time);
       const result = await this.app.mysql.insert('shop', {
         title,
         src,
